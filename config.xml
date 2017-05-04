@@ -17,5 +17,5 @@
 	<icon src="www/img/icon_128.png" width="128" height="128"/>
 	<splash src="www/img/icon_192.png" width="192" height="192"/>
 
-	<content src="www/index.html" />
+	<content src="index.html" />
 </widget>
