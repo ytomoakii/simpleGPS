@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="com.ytomoaki.simplegps" version="0.0.1" android-versionCode="1">
+	<name>simpleGPS</name>
+	<description>
+		Simple GPS application
+	</description>
+	<author email="support@ytomoaki.lv9.org" href="http://ytomoaki.lv9.org">
+            ytomoaki
+	</author>
+	
+	<feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/geolocation" />
+
+	<preference name="permissions" value="none" />
+	<preference name="android-installLocation" value="auto" />
+
+	<icon src="www/img/icon_128.png" width="128" height="128"/>
+	<splash src="www/img/icon_192.png" width="192" height="192"/>
+
+	<content src="www/index.html" />
+</widget>

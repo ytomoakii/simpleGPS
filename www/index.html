@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" charset="utf-8" src="js/script.js"></script>
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script> -->
+		<title>railGPS</title>
+	</head>
+	<body onresize="updateSizeView()">
+		<div id="mainarea">
+			<div id="mapf">
+				<div id="mapd">maparea</div>
+			</div>
+			<Label id="snameView"></Label>
+			<div id="graphd"></div>
+			<div id="config">
+				<div id="config1">
+					Export<BR>
+					<select id="conf_expmode" class="cselect" name="expmode" margin-left="20px">
+						<option value="gpx">GPX</option>
+						<option value="nmea">NMEA</option>
+					</select><BR>
+					<button id="conf_exp" class="cbutton">Export</button><BR>
+					Update Interval<BR>
+					<select id="conf_logint" class="cselect" name="log_interval">
+						<option value="1">1sec</option>
+						<option value="5">5sec</option>
+						<option value="15" selected>15sec</option>
+						<option value="60">60sec</option>
+					</select><BR>
+					History<BR>
+					<button id="conf_logclear" class="cbutton">log clear</button><BR>
+					Station<BR>
+					<!-- <select id="conf_sname" class="cselect" name="sname" margin-left="20px">
+						<option value="OFF">OFF</option>
+						<option value="ON">ON</option>
+					</select><BR> -->
+					<select id="conf_snameapi" class="cselect" name="snameapi" margin-left="20px">
+						<option value="off">OFF</option>
+						<option value="simpleapi">Simple Api</option>
+						<option value="heartrailsapi">HeartRails</option>
+						<option value="ekidataapi" selected>駅データ</option>
+					</select><BR>
+					<select id="conf_snamedisth" class="cselect" name="distance" margin-left="20px">
+						<option value="100">100m</option>
+						<option value="300">300m</option>
+						<option value="500">500m</option>
+						<option value="1000" selected>1km</option>
+						<option value="5000">5km</option>
+					</select><BR>
+					Config<BR>
+					<button id="conf_close" class="cbutton">close</button><BR>
+					<label id="conf_fdate"></label>
+				</div>
+			</div>
+		</div>
+		<footer id="footerid">
+			<img id="compass" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+AKBQMiOsQGeHoAAAHTSURBVCjPdZO9ahtBFIW//YkWYdZrHEtaxXJj0rgLLBg3fgLXwhAIpPNDuPMbuHQnCIS4UZW8hJGIIZ2JggvrX7J+dqUV2pVuirXWkpAPDGeYOefOXOaMIiIso6wo58AXwAF2gWegDHxzRG5XxCKCiFACuwTFCkgfZAoyf+E+SAWkBMUS2AsPIsKfw8PUb8uq1yBaemPUogL1EqREBBVAz2RuPmQydnZ7G3QdFIVNyEbDBm4AlEo+f5b0/Z/Zhwd4fITpdLmnjYX+AT3Iq/re3tmWrsNwCEEQCzzXfS2whvcRfVU103QSYQijUSz0XBfDMFZvsIStiI5VbWfnk5FIxBvVpycGgwGe57H2LPFUjyilqqZ5P93dhWQSgP1cjv1cjvF4/GpUlJXew4jaqmoY5dC2IZ0GTYsFwVL/6xhFdKeiKL9C24ajI7Cs+AQRodPpbDR3IypEokKhOLy6Ejk9FbEsEVV9MyjVl6TFIZn7/sUknW54JyfgOHBwAKYZBWYJTaAODeACQFl8jNb19cf5ZPLjXaPhJGs1jHodrdUi7PUYuy7Pvk8X7oG8I/J3xQxQvbzUJAjOZ/3+57DbPQ7b7VTYbLaDVutu1u/fAt8dkdlC/x9t5vhWxAjvzwAAAABJRU5ErkJggg==" alt="|"/>
+			<label id="sizeview"></label>
+			<label id="debugview"></label>
+			<div id="statusView"></div>
+		</footer>
+		<header id="headerid">
+			<Label id="info"></label>
+			<!-- <input type="button" id="measure" class="hbutton" value="START"/> -->
+			<!-- <input type="button" id="save" class="hbutton" value="SAVE"/> -->
+			<!-- <input type="button" id="clear" class="hbutton" value="CLEAR"/> -->
+			<!-- <input type="button" id="conf" class="hbutton" value="CONFIG"/> -->
+            <button id="conf" class="hbutton"><svg width="30" height="30" viewBox="0 0 10 10"><path d="M0 0 L0 2 10 2 10 0 0 0Z M0 4 L0 6 10 6 10 4 0 4Z M0 8 L0 10 10 10 10 8 0 8Z"></path></svg></button>
+            <button id="measure" class="hbutton"><svg width="30" height="30" viewBox="0 0 10 10"><path d="M0 0 L10 5 0 10 0 0Z"></path></svg></button>
+            <button id="mode" class="hbutton"><svg width="30" height="30" viewBox="0 0 10 10"><path d="M1 1 L1 9 9 9 9 1Z"></path></svg></button>
+			<label id="speedView"></label>
+		</header>
+	</body>
+</html>
