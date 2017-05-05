@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget id="com.ytomoaki.simplegps" version="0.0.2" android-versionCode="2">
+<widget id="com.ytomoaki.simplegps" version="0.0.3" android-versionCode="3">
 	<name>simpleGPS</name>
 	<description>
 		Simple GPS application
@@ -13,9 +13,9 @@
 
 	<preference name="permissions" value="none" />
 	<preference name="android-installLocation" value="auto" />
-	<preference name="geolocation" value="true" />
+	<!-- <preference name="geolocation" value="true" /> -->
 
-	<plugin name="cordova-plugin-geolocation" />
+	<!-- <plugin name="cordova-plugin-geolocation" /> -->
 
 	<icon src="www/img/icon_128.png" width="128" height="128"/>
 	<splash src="www/img/icon_192.png" width="192" height="192"/>
