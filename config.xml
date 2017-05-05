@@ -13,12 +13,12 @@
 
 	<preference name="permissions" value="none" />
 	<preference name="android-installLocation" value="auto" />
-	<preference name=geolocation" value="true" />
+	<preference name="geolocation" value="true" />
 
 	<plugin name="cordova-plugin-geolocation" />
 
 	<icon src="www/img/icon_128.png" width="128" height="128"/>
 	<splash src="www/img/icon_192.png" width="192" height="192"/>
 
-	<content src="www/index.html" />
+	<content src="index.html" />
 </widget>
